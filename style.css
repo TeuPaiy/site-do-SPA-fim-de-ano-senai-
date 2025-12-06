@@ -1336,80 +1336,6 @@ form textarea {
   z-index: 999;
 }
 
-/* HEADER */
-.chat-header {
-  background: #775c57;
-  padding: 12px;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  font-size: 16px;
-  align-items: center;
-}
-.chat-header span {
-  cursor: pointer;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-/* BODY */
-.chat-body {
-  flex: 1;
-  padding: 10px;
-  overflow-y: auto;
-  background: #fafafa;
-}
-
-/* MENSAGEM DO BOT */
-.bot-message {
-  background: #e6dedc;
-  padding: 10px 14px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  max-width: 85%;
-}
-
-/* MENSAGEM DO USUÁRIO */
-.user-message {
-  background: #775c57;
-  color: #fff;
-  padding: 10px 14px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  max-width: 85%;
-  align-self: flex-end;
-}
-
-/* INPUT */
-.chat-input-area {
-  display: flex;
-  padding: 10px;
-  border-top: 1px solid #ddd;
-  background: #fff;
-}
-
-.chat-input-area input {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-.chat-input-area button {
-  margin-left: 8px;
-  padding: 10px 14px;
-  background: #775c57;
-  border: none;
-  color: #fff;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.chat-input-area button:hover {
-  background: #604946;
-}
-
 
 /* Botão de acessibilidade */
 .accessibility-btn {
@@ -1524,3 +1450,266 @@ form textarea {
     transform: translateY(0);
   }
 }
+
+
+.accessibility-btn {
+    position: fixed;
+    bottom: 100px;
+    left: 1822px;
+    width: 55px;
+    height: 55px;
+    background: #7e6f50;
+    border-radius: 50%;
+    display: flex;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 99999;
+}
+
+.accessibility-btn img {
+    width: 100%;
+}
+
+.accessibility-box {
+    position: fixed;
+    bottom: 100px;
+    left: 1550px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 230px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+    display: none;
+    z-index: 99999;
+}
+
+.accessibility-box.active {
+    display: block;
+}
+
+.accessibility-box h3 {
+    margin-bottom: 12px;
+    font-size: 18px;
+    color: #333;
+}
+
+.accessibility-box label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0;
+    color: #333;   /* 🔥 ISSO faz o texto voltar a aparecer */
+    font-size: 15px;
+}
+
+.accessibility-box input {
+    width: 18px;
+    height: 18px;
+}
+
+#resetAccessibility {
+    margin-top: 12px;
+    width: 100%;
+    padding: 8px;
+    background: #d8c396;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+        /* BOTÃO DO CHATBOT */
+        .chat-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #775c57;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 99999;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: 0.3s;
+        }
+
+        .chat-btn:hover {
+            background: #604946;
+            transform: scale(1.05);
+        }
+
+        .chat-btn img {
+            width: 32px;
+            height: 32px;
+            filter: brightness(0) invert(1);
+        }
+
+        /* JANELA DO CHATBOT */
+        .chat-window {
+            position: fixed;
+            bottom: 100px;
+            right:100px;
+            width: 350px;
+            height: 500px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+            display: none;
+            flex-direction: column;
+            z-index: 99999;
+        }
+
+        .chat-window.active {
+            display: flex;
+        }
+
+        /* HEADER */
+        .chat-header {
+            background: #775c57;
+            padding: 12px;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            font-size: 16px;
+            align-items: center;
+            border-radius: 12px 12px 0 0;
+        }
+
+        .chat-header span {
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* BODY */
+        .chat-body {
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+            background: #fafafa;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* MENSAGEM DO BOT */
+        .bot-message {
+            background: #e6dedc;
+            padding: 10px 14px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            max-width: 85%;
+            align-self: flex-start;
+        }
+
+        /* MENSAGEM DO USUÁRIO */
+        .user-message {
+            background: #775c57;
+            color: #fff;
+            padding: 10px 14px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            max-width: 85%;
+            align-self: flex-end;
+        }
+
+        /* INPUT */
+        .chat-input-area {
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+            background: #fff;
+            border-radius: 0 0 12px 12px;
+        }
+
+        .chat-input-area input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        .chat-input-area button {
+            margin-left: 8px;
+            padding: 10px 14px;
+            background: #775c57;
+            border: none;
+            color: #fff;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .chat-input-area button:hover {
+            background: #604946;
+        }
+
+        /* ACESSIBILIDADE */
+        .accessibility-btn {
+            position: fixed;
+            bottom: 100px;
+            left: 1822px;
+            width: 55px;
+            height: 55px;
+            background: #7e6f50;
+            border-radius: 50%;
+            display: flex;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 99999;
+        }
+
+        .accessibility-btn img {
+            width: 100%;
+        }
+
+        .accessibility-box {
+            position: fixed;
+            bottom: 100px;
+            left: 1550px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            width: 230px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+            display: none;
+            z-index: 99999;
+        }
+
+        .accessibility-box.active {
+            display: block;
+        }
+
+        .accessibility-box h3 {
+            margin-bottom: 12px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .accessibility-box label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 8px 0;
+            color: #333;
+            font-size: 15px;
+        }
+
+        .accessibility-box input {
+            width: 18px;
+            height: 18px;
+        }
+
+        #resetAccessibility {
+            margin-top: 12px;
+            width: 100%;
+            padding: 8px;
+            background: #d8c396;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
