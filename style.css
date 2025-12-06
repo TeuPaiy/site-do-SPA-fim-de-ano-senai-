@@ -924,13 +924,6 @@ body {
     gap: 35px;
 }
 
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   background: #f8f6f3;
@@ -1513,4 +1506,21 @@ form textarea {
 
 .small-text * {
     font-size: 90% !important;
+}
+
+.hero-logo {
+  width: 180px;
+  max-width: 55%;
+  margin-bottom: 25px;
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.35));
+  animation: heroLogoFade 1.2s ease forwards;
+  opacity: 0;
+  transform: translateY(-12px);
+}
+
+@keyframes heroLogoFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
